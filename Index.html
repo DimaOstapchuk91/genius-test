@@ -4,33 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна перканя</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
       <nav>
-        <a href="">
+        <a href="./Index.html">
           <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
         </a>
         <ul>
-          <li><a href="#">Франшиза</a></li>
-          <li><a href="#">Наші традиціЇ</a></li>
-          <li><a href="#">Формати</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a class="link" href="#Traditions-section">Наші ТрадиціЇ</a></li>
+          <li><a class="link" href="#chefs-section">Шеф Кухарі</a></li>
+          <li><a class="link" href="#formats-section">Формати</a></li>
+          <li><a class="link" href="#contact-section">Контакти</a></li>
         </ul>
       </nav>
-      <button type="button">замовити дзвінок</button>
+      <button class="button" type="button">замовити дзвінок</button>
     </header>
     <main>
       <section>
-        <h1>Сучасна Пекарня</h1>
-        <ul>
+        <h1 class="hero-title"><span class="accent">Сучасна</span> Пекарня</h1>
+        <ul class="advanteges-list">
           <li>Великий попит на ринку</li>
           <li>Доступні за бюджетом формати</li>
           <li>Досвідчина управлінська команда</li>
         </ul>
       </section>
-      <section>
-        <h2>Новий формат Традицій</h2>
+      <section id="Traditions-section">
+        <h2 class="section-title">Новий формат Традицій</h2>
         <p>
           <span>shop bakery</span> — це пекарня, яка взяла все найкраще, і
           зберегла смак традиційної випічки та натуральність інгредієнтів.
@@ -45,8 +46,10 @@
           alt="Чоловік пекар дивиться на батони із посмішкою"
         />
       </section>
-      <section>
-        <h2>Найкращі шеф - кухарі</h2>
+      <section id="chefs-section">
+        <h2 class="section-title">
+          Найкращі <span class="accent">шеф-кухарі</span>
+        </h2>
         <ul>
           <li>
             <article>
@@ -69,28 +72,37 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Формати</h2>
+      <section id="formats-section">
+        <h2 class="section-title">Формати</h2>
         <ul>
           <li>
-            <aeticle>
+            <article>
               <h3 lang="en">Walrus</h3>
-            </aeticle>
+            </article>
           </li>
           <li>
-            <aeticle>
+            <article>
               <h3 lang="en">Horseshoe</h3>
-            </aeticle>
+            </article>
           </li>
           <li>
-            <aeticle>
+            <article>
               <h3 lang="en">Handlebar</h3>
-            </aeticle>
+            </article>
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Приеднуетесь до мережі пекарень</h2>
+      <section id="contact-section">
+        <h2 class="section-title">Приеднуетесь до мережі пекарень</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1638712576946!2d30.48865857694164!3d50.45667308691521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1699973026912!5m2!1suk!2sua"
+          width="603"
+          height="595"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </main>
     <footer>
@@ -99,10 +111,10 @@
           <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
         </a>
         <ul>
-          <li><a href="#">Франшиза</a></li>
-          <li><a href="#">Наші традиціЇ</a></li>
-          <li><a href="#">Формати</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a href="#Traditions-section">Наші традиціЇ</a></li>
+          <li><a href="#chefs-section">Шеф кухарі</a></li>
+          <li><a href="#formats-section">Формати</a></li>
+          <li><a href="#contact-section">Контакти</a></li>
         </ul>
       </nav>
       <address>
@@ -128,7 +140,7 @@
           </li>
         </ul>
         <a href="#" target="_blank">Політика конфеденційності</a>
-        <p>2022 Дані захищені</p>
+        <p>&copy;2022 Дані захищені</p>
       </address>
     </footer>
   </body>
