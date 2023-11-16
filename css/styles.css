@@ -1,48 +1,159 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 300;
+  src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-weight: 900;
+  src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
+}
+
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
   --color-brand-light: #819857;
   --color-brand-dark: #465929;
 }
+
 /* base */
 body {
   color: var(--color-primary-dark);
+  line-height: 1.5;
+  font-family: 'poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
+
+address {
+  font-style: normal;
+}
+
 ul {
   list-style-type: none;
 }
+
 /* button */
 .button {
   color: var(--color-primary-light);
+  font-weight: 600;
   background-color: var(--color-brand-light);
   border: 2px solid var(--color-primary-light);
   border-radius: 8px;
   cursor: pointer;
 }
+
 .button:hover {
   color: var(--color-brand-light);
   background-color: transparent;
 }
+
 /* link */
 .link {
   color: var(--color-primary-light);
+  text-decoration: none;
 }
+
 .link:hover {
   color: var(--color-brand-light);
+  font-weight: 600;
 }
+
 /* hero section */
 .hero-title {
   color: var(--color-primary-light);
+  text-align: center;
+  font-size: 128px;
+  font-weight: 900;
 }
+
 .hero-title .accent {
   color: var(--color-brand-light);
 }
+
 /* advanteges section */
 .advanteges-list {
   color: var(--color-primary-light);
   background-color: var(--color-brand-light);
 }
 
+.advanteges-item {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.section-title {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.31;
+}
+
 .section-title .accent {
   color: var(--color-brand-dark);
+}
+
+/* traditions section */
+.traditions-text .uppercase {
+  text-transform: uppercase;
+}
+
+.traditions-text .brand {
+  color: var(--color-brand-light);
+  font-weight: 600;
+}
+
+/* chefs-section */
+.chef-title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+/* format section */
+.format-title {
+  color: var(--color-primary-light);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.format-text {
+  color: var(--color-primary-light);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* join section */
+.join-text {
+  color: var(--color-brand-light);
+}
+
+/* footer-sektion */
+.adress-link {
+  color: var(--color-primary-light);
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: none;
+}
+.adress-link:hover {
+  color: var(--color-brand-light);
+}
+.adress-copyriht {
+  color: #a18268;
+  font-size: 14px;
 }
