@@ -29,8 +29,10 @@
 :root {
   --color-primary-dark: #31261a;
   --color-primary-light: #faf4ea;
-  --color-brand-light: #819857;
+  --color-brand-normal: #819857;
   --color-brand-dark: #465929;
+  --color-brand-light: #cfcfbc;
+  --color-secondary-dark: #a18268;
 }
 
 /* base */
@@ -40,6 +42,7 @@
 
 body {
   color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
   line-height: 1.5;
   font-family: 'poppins', sans-serif;
   font-size: 18px;
@@ -62,6 +65,8 @@ address {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -89,14 +94,14 @@ ul {
   padding: 16px 32px;
   color: var(--color-primary-light);
   font-weight: 600;
-  background-color: var(--color-brand-light);
-  border: 2px solid var(--color-primary-light);
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   cursor: pointer;
 }
 
 .button:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   background-color: transparent;
 }
 
@@ -107,13 +112,40 @@ ul {
 }
 
 .link:hover {
-  color: var(--color-brand-light);
-  font-weight: 600;
+  color: var(--color-brand-normal);
+}
+
+/* header */
+.header {
+  background-color: lightgray;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.heder-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* hero section */
 .hero-section {
   padding: 272px 0px;
+  background-image: url('../images/Hero-section-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .hero-title {
@@ -125,18 +157,24 @@ ul {
 }
 
 .hero-title .accent {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 /* advanteges section */
+.advanteges-section {
+  padding: 16px 0px;
+  background-color: var(--color-brand-normal);
+}
 .advanteges-list {
-  color: var(--color-primary-light);
-  background-color: var(--color-brand-light);
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .advanteges-item {
   font-size: 20px;
   font-weight: 300;
+  color: var(--color-primary-light);
 }
 
 .section-title {
@@ -145,11 +183,25 @@ ul {
   line-height: 1.31;
 }
 
+.section-title.centered {
+  text-align: center;
+}
+
 .section-title .accent {
   color: var(--color-brand-dark);
 }
 
 /* traditions section */
+.traditions-conteiner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.traditions-content {
+  max-width: 710px;
+}
+
 .Traditions-section {
   padding-top: 96px;
 }
@@ -157,19 +209,43 @@ ul {
 .traditions-title {
   margin-bottom: 42px;
 }
+
+.traditions-text {
+  margin-bottom: 42px;
+}
 .traditions-text .uppercase {
   text-transform: uppercase;
 }
 
+.traditions-text.limited {
+  max-width: 3400px;
+}
+
 .traditions-text .brand {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
   font-weight: 600;
 }
 
 /* chefs-section */
 .chefs-title {
-  margin-bottom: 80px;
+  margin: 0 auto 80px;
+  max-width: 520px;
 }
+
+.chefs-title::before,
+.chefs-title::after {
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+  content: '';
+}
+
+.chef-foto {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
+}
+
 .chef-title {
   font-weight: 600;
   font-size: 40px;
@@ -177,6 +253,27 @@ ul {
 }
 
 /* format section */
+.formats-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+.format-card {
+  height: 444px;
+  background: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-dark) 100%
+  );
+  padding: 24px;
+  border: 1px solid lightgrey;
+  border-radius: 16px;
+}
 .formats-title {
   margin-bottom: 80px;
 }
@@ -197,7 +294,7 @@ ul {
   margin-bottom: 16px;
 }
 .contakt-text {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 /* footer-sektion */
@@ -208,9 +305,17 @@ ul {
   text-decoration: none;
 }
 .adress-link:hover {
-  color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 .adress-copyriht {
   color: #a18268;
   font-size: 14px;
+}
+
+.footer {
+  background-image: url('../images/footer-background.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
